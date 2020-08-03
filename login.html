@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Utilities/password_strength.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Script starts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+    <script src="Utilities/firebase.js"></script>
+    <script src="Utilities/password_strength.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Script ends -->
+</head>
+<body>
+
+    <div class="main-container" id="login-form">
+        <div class="heading">
+            <h3 class="head">User Login</h3>
+        </div>
+        <div class="wrap">
+            <input type="email" id="veriemail" placeholder="Enter your Email" required/>
+        </div>
+        <div class="wrap">
+            <input type="password" placeholder="Enter your password" id="veripassword" maxlength="20" required/>
+            <div class="icon">
+                <i class="material-icons" id="toogleview" onclick="return toogleLogin();">visibility</i>
+                <i class="material-icons" id="toogleview2" onclick="return toogleLogin();">visibility_off</i>
+            </div>
+        </div>
+        <div class="wrap">
+            <button class="submit-btn" onclick="return login();">LOGIN</button>
+        </div>
+        <div class="button-div sign-in">
+            <p>Don't have an account? <a href="registration.html" onclick="return register_page();">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

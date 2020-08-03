@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClasseMondialeStore</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-desktop.css" />
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="Utilities/aos.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Script-starts -->
+  <!-- firebase-sdk -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="Utilities/aos.js"></script>
+  <script src="Utilities/firebase.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Script ends -->
+
+</head>
+
+<body class="homepage">
+  <div id="header">
+    <div id="nav-wrapper">
+
+      <nav id="nav">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">HouseItems</a></li>
+          <li><a href="">Electronics</a></li>
+          <li><a href="registration.html" class="joinin-btn">Join In</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+
+      <div id="logo">
+        <img src="LOGO-2.png" alt="TIT">
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+
+
+  <div id="featured">
+    <div class="container">
+      <header>
+        <h2>Welcome to Classe Mondiale Store</h2>
+      </header>
+      <p>Classe Mondiale Store, The brand new Ecommerce Platform of India. We deliver all over the Nation and free
+        shipping on all orders. This is a demo project we are preparing for MSME Web Development course.</p>
+    </div>
+  </div>
+  </div>
+
+  <!-- Products section -->
+
+  <section class="products-section">
+    <div class="product-container">
+      <div class="title">
+        <h1>Our Products</h1>
+      </div>
+      <div class="product-body-container">
+        <div class="product-container-main">
+          <div class="product-container-each" data-aos="fade-right">
+            <p class="heading">Housing Utilities</p>
+            <div class="offer">
+              <p><span>50%</span> Off</p>
+            </div>
+            <div class="item-details">
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+            </div>
+            <div class="buy-btn">
+              <button onclick="return showModal();">Buy</button>
+            </div>
+          </div>
+          <div class="product-container-each" data-aos="zoom-in">
+            <p class="heading">Electronics</p>
+            <div class="offer">
+              <p><span>70%</span> Off</p>
+            </div>
+            <div class="item-details">
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+            </div>
+            <div class="buy-btn">
+              <button onclick="return showModal();">Buy</button>
+            </div>
+          </div>
+          <div class="product-container-each" data-aos="fade-left">
+            <p class="heading">Clothing</p>
+            <div class="offer">
+              <p><span>60%</span> Off</p>
+            </div>
+            <div class="item-details">
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+              <div class="item-list"><i class="material-icons">check</i><p>Item 1</p></div>
+            </div>
+            <div class="buy-btn">
+              <button onclick="return showModal();">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- login-modal-starts -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="close-btn" onclick="return closeModal();">&times;</span>
+          <h2>LOGIN</h2>
+        </div>
+        <div class="modal-body">
+          <div class="input">
+            <input type="email" placeholder="Enter email" id="modalloginemail" required />
+          </div>
+          <div class="input">
+            <input type="password" placeholder="Enter password" id="modalloginpass" required />
+            <div class="icon">
+              <i class="material-icons" id="toogleview" onclick="return toogleLogin();">visibility</i>
+              <i class="material-icons" id="toogleview2" onclick="return toogleLogin();">visibility_off</i>
+          </div>
+          </div>
+          <div class="logout-btn">
+            <div>
+              <button id="login" class="btn" onclick="return modalLog();">LOGIN</button>
+            </div>
+            <div>
+              <button id="signin" class="btn" onclick="return sign();">SIGN UP</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- login-modal-ends -->
+
+
+  </section>
+
+  <div id="footer">
+    <div class="container">
+      <h2>Get in touch</h2>
+      <div class="social-icons">
+        <a href="http://www.facebook.com/sambuddhas" target="blank">
+          <i class="fa fa-facebook-square"></i>
+        </a>
+        <a href="http://www.linkedin.com/in/sambuddha-sengupta-386a24132/" target="blank">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/sambuddhas_" target="blank">
+          <i class="fa fa-twitter-square"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="copyright">
+    <div class="container">
+      Design: <a href="http://www.facebook.com/sambuddhas">Sambuddha</a>
+    </div>
+  </div>
+
+  <script>
+    AOS.init({
+      duration: 1500,
+    })
+  </script>
+
+  <script src="script.js"></script>
+  <script src="modalpage.js"></script>
+
+
+</body>
+
+</html>

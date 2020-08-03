@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="Utilities/password_strength.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="Utilities/firebase.js"></script>
+    <script src="Utilities/password_strength.js"></script>
+</head>
+
+<body>
+
+    <section>
+            <div class="main-container" id="register-form">
+                <div class="heading">
+                    <h3 class="head">User Registration</h3>
+                </div>
+                <div class="wrap">
+                    <input type="text" id="username" placeholder="Enter Full Name" name="uname" required/>
+                </div>
+                <div class="wrap">
+                    <input type="email" id="useremail" placeholder="Enter Email" name="uemail" required/>
+                </div>
+                <div class="wrap">
+                    <input type="password" placeholder="Enter your password" id="password" maxlength="20" onkeyup="return strength();" required/>
+                    <div class="icon">
+                        <i class="material-icons" id="toogleview" onclick="return toogle();">visibility</i>
+                        <i class="material-icons" id="toogleview2" onclick="return toogle();">visibility_off</i>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <input type="password" placeholder="Confirm password" id="cpassword" maxlength="20" required/>
+                </div>
+                <div class="wrap wrap-strength">
+                    <span class="head strength" id="length"></span>
+                </div>
+                <div class="strength-meter" id="mback">
+                    <div class="main-meter" id="mfront"></div>
+                </div>
+                <div class="wrap">
+                    <button class="submit-btn" onclick="return submit();">SIGN UP</button>
+                </div>
+                <div class="button-div sign-in">
+                    <p>Already has an account? <a href="login.html" onclick="return login_page();">Sign In</a></p>
+                </div>
+            </div>
+
+        
+            <!-- <div class="main-container" id="login-form">
+                <div class="heading">
+                    <h3 class="head">User Login</h3>
+                </div>
+                <div class="wrap">
+                    <input type="email" id="veriemail" placeholder="Enter your Email" required/>
+                </div>
+                <div class="wrap">
+                    <input type="password" placeholder="Enter your password" id="veripassword" maxlength="20" required/>
+                    <div class="icon">
+                        <i class="material-icons" id="toogleview" onclick="return toogle();">visibility</i>
+                        <i class="material-icons" id="toogleview2" onclick="return toogle();">visibility_off</i>
+                    </div>
+                </div>
+                <div class="button-div">
+                    <button class="submit-btn" onclick="return login();">LOGIN</button>
+                </div>
+                <div class="button-div sign-in">
+                    <p>Don't have an account? <a href="login.html" onclick="return register_page();">Sign Up</a></p>
+                </div>
+            </div>
+
+            <div class="show-email-container">
+                <p id="show-email"></p>
+                <button id="logout-btn" onclick="return logout()">LOGOUT</button>
+            </div> -->
+        
+    </section>
+
+    
+    <script src="script.js"></script>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+html, body {
+    overflow-x: hidden;
+}
+
+.products-section {
+    width: auto;
+    margin: auto;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: auto;
+}
+
+.products-section h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.product-container {
+    width: 900px;
+    padding: 4rem 0rem;
+}
+
+.product-body-container {
+    margin: 0;
+    padding: 0;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-container-main {
+    width: 900px;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.product-container-each {
+    position: relative;
+    width: 240px;
+    height: 250px;
+    height: auto;
+    padding: 5px;
+    display: block;
+    background-color: white;
+    box-shadow: 1px 1px 15px 2px rgba(128, 128, 128, 0.555);
+}
+
+.heading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+
+}
+
+.offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer span {
+    height: 20px;
+    width: auto;
+    background-color: rgba(3, 172, 172, 0.808);
+    padding-top: 10px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
+.item-details {
+    margin-top: 25px;
+    height: 200px;
+}
+
+.buy-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 20px;
+}
+
+.buy-btn button {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    outline: none;
+    border: 0.2px solid black;
+    color: white;
+    background-color: black;
+}
+
+
+.social-icons a i{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.modal{
+    display: none;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0,0,0,.4);
+    overflow: auto;
+    z-index: 1;
+    padding-top: 100px;
+}
+
+.modal-content {
+    background-color: white;
+    position: relative;
+    margin: auto;
+    padding: 1rem;
+    width: 60%;
+    animation-name: zoomin;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    -moz-animation-name: zoomin;
+    -moz-animation-duration: .5s;
+    -moz-animation-timing-function: ease-in;
+    -o-animation-name: zoomin;
+    -o-animation-timing-function: ease-in;
+    -o-animation-duration: 0.5s;
+}
+
+@keyframes zoomin {
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: black;
+    color: white;
+}
+
+.modal-header h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+#close-btn {
+    float: right;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#close-btn:hover, #close-btn:focus {
+    color: palegreen;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 1rem;
+}
+
+.modal-body .title {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.modal-body span {
+    color: black;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.ac-btn {
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn {
+    padding: 15px 50px;
+    background-color: black;
+    color: white;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border: 0px solid;
+}
+
+.logout-btn {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-btn div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.input input {
+    width: 70%;
+    padding: 8px;
+    outline: none;
+    border: 1px solid; 
+    color: black;
+    font-size: 18px;
+}
+
+
+.icon {
+    display: flex;
+    margin-top: 0px;
+    margin-left: -30px;
+    cursor: pointer;
+    opacity: .6;
+}
+
+#toogleview2 {
+    display: none;
+    cursor: pointer;
+}
+
+.item-list {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.item-list i {
+    font-size: 18px;
+    margin-right: 5px;
+    color: green;
+    font-weight: 900;
+}
+
+.item-list p {
+    font-size: 18px;
+}
+
