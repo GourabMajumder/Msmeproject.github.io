@@ -23,7 +23,7 @@ html, body {
 
 .product-container {
     width: 900px;
-    padding: 4rem 0rem;
+    padding: 2rem 0rem;
 }
 
 .product-body-container {
@@ -44,7 +44,7 @@ html, body {
 
 .product-container-each {
     position: relative;
-    width: 240px;
+    width: 270px;
     height: 250px;
     height: auto;
     padding: 5px;
@@ -85,6 +85,7 @@ html, body {
 .item-details {
     margin-top: 25px;
     height: 200px;
+    margin-left: 20px;
 }
 
 .buy-btn {
@@ -263,19 +264,23 @@ html, body {
 .item-list {
     display: inline-flex;
     width: 100%;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    height: 40px;
+    height: 35px;
 }
 
 .item-list i {
-    font-size: 18px;
+    font-size: 12px;
     margin-right: 5px;
+    margin-top: 2px;
     color: green;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 .item-list p {
     font-size: 18px;
+    color: black;
+    font-weight: 200;
 }
+
 

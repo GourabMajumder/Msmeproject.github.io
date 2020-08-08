@@ -19,42 +19,43 @@
 <body>
 
     <section>
-            <div class="main-container" id="register-form">
-                <div class="heading">
-                    <h3 class="head">User Registration</h3>
-                </div>
-                <div class="wrap">
-                    <input type="text" id="username" placeholder="Enter Full Name" name="uname" required/>
-                </div>
-                <div class="wrap">
-                    <input type="email" id="useremail" placeholder="Enter Email" name="uemail" required/>
-                </div>
-                <div class="wrap">
-                    <input type="password" placeholder="Enter your password" id="password" maxlength="20" onkeyup="return strength();" required/>
-                    <div class="icon">
-                        <i class="material-icons" id="toogleview" onclick="return toogle();">visibility</i>
-                        <i class="material-icons" id="toogleview2" onclick="return toogle();">visibility_off</i>
-                    </div>
-                </div>
-                <div class="wrap">
-                    <input type="password" placeholder="Confirm password" id="cpassword" maxlength="20" required/>
-                </div>
-                <div class="wrap wrap-strength">
-                    <span class="head strength" id="length"></span>
-                </div>
-                <div class="strength-meter" id="mback">
-                    <div class="main-meter" id="mfront"></div>
-                </div>
-                <div class="wrap">
-                    <button class="submit-btn" onclick="return submit();">SIGN UP</button>
-                </div>
-                <div class="button-div sign-in">
-                    <p>Already has an account? <a href="login.html" onclick="return login_page();">Sign In</a></p>
+        <div class="main-container" id="register-form">
+            <div class="heading">
+                <h3 class="head">User Registration</h3>
+            </div>
+            <div class="wrap">
+                <input type="text" id="username" placeholder="Enter Full Name" name="uname" required />
+            </div>
+            <div class="wrap">
+                <input type="email" id="useremail" placeholder="Enter Email" name="uemail" required />
+            </div>
+            <div class="wrap">
+                <input type="password" placeholder="Enter your password" id="password" maxlength="20"
+                    onkeyup="return strength();" required />
+                <div class="icon">
+                    <i class="material-icons" id="toogleview" onclick="return toogle();">visibility</i>
+                    <i class="material-icons" id="toogleview2" onclick="return toogle();">visibility_off</i>
                 </div>
             </div>
+            <div class="wrap">
+                <input type="password" placeholder="Confirm password" id="cpassword" maxlength="20" required />
+            </div>
+            <div class="wrap wrap-strength">
+                <span class="head strength" id="length"></span>
+            </div>
+            <div class="strength-meter" id="mback">
+                <div class="main-meter" id="mfront"></div>
+            </div>
+            <div class="wrap">
+                <button class="submit-btn" onclick="return submit();">SIGN UP</button>
+            </div>
+            <div class="button-div sign-in">
+                <p>Already has an account? <a href="login.html" onclick="return login_page();">Sign In</a></p>
+            </div>
+        </div>
 
-        
-            <!-- <div class="main-container" id="login-form">
+
+        <!-- <div class="main-container" id="login-form">
                 <div class="heading">
                     <h3 class="head">User Login</h3>
                 </div>
@@ -80,13 +81,19 @@
                 <p id="show-email"></p>
                 <button id="logout-btn" onclick="return logout()">LOGOUT</button>
             </div> -->
-        
+
+        <section class="designed-by">
+            <div class="me">
+                <p>Designed & Backend Connectivity By- <span>Gourab</span></p>
+            </div>
+        </section>
+
     </section>
 
-    
+
     <script src="script.js"></script>
 
-    
+
 </body>
 
 </html>

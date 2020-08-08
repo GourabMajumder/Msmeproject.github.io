@@ -82,7 +82,7 @@ function login() {
         });
     }).catch((error)=> {
         var errorCode = error.code;
-        var errorMessage = error.message;
+        var errorMessage = error.message;9
         swal({
             icon: "error",
             text: "Error",
@@ -97,7 +97,6 @@ firebase.auth().onAuthStateChanged((user)=> {
             var userId = firebase.auth().currentUser.uid; 
         }
         firebase.database().ref('/users/' + userId).once('value', snap => {
-            console.log(snap.val());
             document.getElementById('showname').innerHTML = snap.val().username;
             document.getElementById('showemail').innerHTML = snap.val().useremail;
         })
