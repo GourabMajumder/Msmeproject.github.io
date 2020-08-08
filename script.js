@@ -82,7 +82,7 @@ function login() {
         });
     }).catch((error)=> {
         var errorCode = error.code;
-        var errorMessage = error.message;9
+        var errorMessage = error.message;
         swal({
             icon: "error",
             text: "Error",
